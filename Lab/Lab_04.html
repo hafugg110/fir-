@@ -7,26 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+
+        body {
+            text-align: center;
+            font-size: 25px;
+        }
+        tr:nth-of-type(even){
+            background-color: sandybrown;
+        }
+        td:first-of-type{
+            background-color: rgb(255, 253, 132);
+        }
+        th {
+            background-color: aqua;
+        }
+        #mid{
+            background-color: greenyellow;
+            font-size: 60px;
+        }
+        #bor{
+            background-color: mistyrose;
+        }       
     </style>
 </head>
 
 <body>
-    <table border="1" width=70%>
+    <table id=bor border="1">
         <caption>課表</caption>
         <thead>
             <tr>
                 <th></th>
-                <th style="text-align: center;">星期一</th>
-                <th style="text-align: center;">星期二</th>
-                <th style="text-align: center;">星期三</th>
-                <th style="text-align: center;">星期四</th>
-                <th style="text-align: center;">星期五</th>
+                <th >星期一</th>
+                <th >星期二</th>
+                <th >星期三</th>
+                <th >星期四</th>
+                <th >星期五</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>09:10</td>
+                <td >09:10</td>
                 <td>python基礎程式設計</td>
                 <td>Web基礎程式設計</td>
                 <td>軟體工程專題 </td>
@@ -57,7 +77,7 @@
         <tbody>
             <tr>
                 <td>12:10</td>
-                <td colspan="5">午休</td>
+                <td colspan="5" id="mid">午休</td>
             </tr>
         </tbody>
         <tbody>
