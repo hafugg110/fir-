@@ -10,17 +10,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <style>
         h1 {
-  text-shadow: 2px 2px;
-}
+            text-shadow: 2px 2px;
+        }
 
-h1 {
-    text-shadow: 2px 2px 5px;
-}
+        h1 {
+            text-shadow: 2px 2px 5px;
+        }
 
-h1 {
-    text-shadow: 2px 2px 5px red;
-}
+        h1 {
+            text-shadow: 2px 2px 5px red;
+        }
 
+        .main {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        tr {
+            text-align: center;
+        }
+
+        th {
+            padding: 10px;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: #eee
+        }
+
+        table thead {
+            background-color: rgb(255, 51, 0);
+            color: white;
+        }
+
+        table thead th:first-child {
+            border-radius: 5px 0 0 0;
+            border: 1px solid blue;
+        }
+
+        table thead th:last-child {
+            border-radius: 0 5px 0 0;
+            border-right: 1px solid blue;
+        }
+
+        table tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 5px;
+        }
+
+        table tbody tr:last-child td:last-child {
+            border-radius: 0 0 5px 0;
+        }
     </style>
 
 </head>
@@ -39,7 +83,39 @@ h1 {
 
         <body>
             <h1>Text-shadow effect!</h1>
-          </body>
+
+            <div class="main">
+                <table>
+                    <thead>
+                        <th>Country</th>
+                        <th>Capital</th>
+                        <th>Population</th>
+                        <th>Year</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>China</td>
+                            <td>Beijing</td>
+                            <td>21,542,000</td>
+                            <td>2010</td>
+                        </tr>
+                        <tr>
+                            <td>India</td>
+                            <td>New Delhi</td>
+                            <td>14,200,004</td>
+                            <td>2011</td>
+                        </tr>
+                        <tr>
+                            <td>Japan</td>
+                            <td>Tokyo</td>
+                            <td>13,929,286</td>
+                            <td>2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </body>
 
 
 </html>
