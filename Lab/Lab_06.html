@@ -7,60 +7,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
         body {
             background-color: black;
-            background:url(https://i.imgur.com/vcWZOjQ.jpeg) no-repeat fixed left bottom 10px,url(https://i.imgur.com/qV1AJ4k.jpeg) no-repeat fixed right bottom 10px ;       
+            background: url(https://i.imgur.com/vcWZOjQ.jpeg) no-repeat fixed left bottom 10px, url(https://i.imgur.com/qV1AJ4k.jpeg) no-repeat fixed right bottom 10px;
             text-align: center;
-            font-size: 60px;
+            font-size: 15px;
         }
-        table{
+
+        table {
             border-collapse: separate;
             border-spacing: 0;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            
+
             border-color: blue;
-            border-width:5px ;/*上右左下*/
+            border-width: 5px;
+            /*上右左下*/
             margin-top: 30px;
             margin-left: 30px;
         }
-        caption{
+
+        caption {
             color: ivory;
-            text-shadow:  0px -2px 4px #fff, 0px -2px 10px rgb(51, 255, 95), 0px -10px 20px         rgb(0, 153, 255), 0px -20px 40px rgb(61, 51, 204);
+            text-shadow: 0px -2px 4px #fff, 0px -2px 10px rgb(51, 255, 95), 0px -10px 20px rgb(0, 153, 255), 0px -20px 40px rgb(61, 51, 204);
         }
-        tr:nth-of-type(even){
+
+        tr:nth-of-type(even) {
             background-color: sandybrown;
         }
-        td:first-of-type{
-            background-color: rgb(255, 253, 132);
+
+        td:first-of-type {
+            background-color: rgb(146, 17, 135);
         }
+
         th {
             background-color: aqua;
         }
-        #mid{
+
+        #mid {
             font-size: 30px;
-            vertical-align:top;
+            vertical-align: top;
             text-align: right;
             color: rgb(253, 43, 53);
             text-decoration: underline;
             text-transform: capitalize;
-            text-shadow:  0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         #F90, 0px -20px 40px #C33;
-            font-family: monospace,sans-serif;
-            font-style:oblique;
+            text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px #F90, 0px -20px 40px #C33;
+            font-family: monospace, sans-serif;
+            font-style: oblique;
             font-weight: 900;
 
         }
-        #bor{
-            background-color: mistyrose;
-        }       
-        thead.bo{
-            color:darkviolet
+
+        #bor {
+            background-color: rgb(12, 105, 54);
         }
-        a.lab{
+
+        thead.bo {
+            color: darkviolet
+        }
+
+        a.lab {
             color: #FF3;
+        }
+        footer{
+            color: white;
+            font-size: 10px;
+            
+        }
+        section{
+            color: white;
         }
     </style>
 </head>
@@ -68,91 +85,114 @@
 <body>
     <a class="lab" href="https://hafugg110.github.io/fir-/Lab/index.html" , target="blank">Lab </a>
     <hr />
-    <table id=bor border="1">
-        <caption>課表</caption>
-        <thead class="bo">
-            <tr>
-                <th></th>
-                <th >星期一</th>
-                <th >星期二</th>
-                <th >星期三</th>
-                <th >星期四</th>
-                <th >星期五</th>
-            </tr>
-        </thead>
-        <tbody >
-            <tr>
-                <td >09:10</td>
-                <td >python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-                <td>軟體工程專題 </td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>10:10</td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-                <td>軟體工程專題 </td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>11:10</td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-                <td>軟體工程專題 </td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>12:10</td>
-                <td colspan="5" id="mid">午休 break time</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>13:10</td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-                <td>資訊概論 </td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>14:10</td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-                <td>資訊概論 </td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>15:10</td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-                <td>資訊概論 </td>
-                <td>python基礎程式設計</td>
-                <td>Web基礎程式設計</td>
-            </tr>
-        </tbody>
-        <tbodt>
-            <tr>
-                <td>16:00</td>
-                <td colspan="5"></td>
-            </tr>
-        </tbodt>
-    </table>
+    <section>
+        <p>大麥克漢堡（Big Mac），在臺灣舊稱麥香堡[1]，為知名速食連鎖店麥當勞的主要產品之一，
+
+        </p>
+        <p>
+            該產品由麥當勞特許經營商吉姆·德利加蒂在1965年於賓州尤寧敦（Uniontown）開店時所發明，
+        </p>
+            <p>
+            1968年起開始在全美國發售[2]。該漢堡產品以上下兩層（或上中下三層）麵包夾住牛肉、起司、酸黃瓜、
+        </p>
+            <p>
+            洋蔥、少量生菜、獨特醬料等七種食材，除了早餐外，於該餐廳全天供應。
+        </p>   
+    </section>  
+    <section>
+        <table id=bor border="1">
+            <caption>課表</caption>
+            <thead class="bo">
+                <tr>
+                    <th></th>
+                    <th>星期一</th>
+                    <th>星期二</th>
+                    <th>星期三</th>
+                    <th>星期四</th>
+                    <th>星期五</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:10</td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                    <td>軟體工程專題 </td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>10:10</td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                    <td>軟體工程專題 </td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>11:10</td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                    <td>軟體工程專題 </td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>12:10</td>
+                    <td colspan="5" id="mid">午休 break time</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>13:10</td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                    <td>資訊概論 </td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>14:10</td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                    <td>資訊概論 </td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>15:10</td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                    <td>資訊概論 </td>
+                    <td>python基礎程式設計</td>
+                    <td>Web基礎程式設計</td>
+                </tr>
+            </tbody>
+            <tbodt>
+                <tr>
+                    <td>16:00</td>
+                    <td colspan="5"></td>
+                </tr>
+            </tbodt>
+        </table>
+    </section>
+    <section>
+        <a  href="https://zh.wikipedia.org/wiki/%E5%A4%A7%E9%BA%A5%E5%85%8B%E6%BC%A2%E5%A0%A1" , target="blank">以上參考連結 </a>
+    </section>    
+    <footer>
+        個人網址:lala110099@gmail.com
+        網頁完成日期:2021/3/24
+    </footer>
 </body>
 
 </html>
