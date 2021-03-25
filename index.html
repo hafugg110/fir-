@@ -9,83 +9,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <style>
-        h1 {
-            text-shadow: 2px 2px;
+        /* div {
+            border: 1px red solid;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center; */
         }
 
-        h1 {
-            text-shadow: 2px 2px 5px;
+        body{
+            display: flex;
+            flex-direction: row;
         }
 
-        h1 {
-            text-shadow: 2px 2px 5px red;
+        header {
+            background: chartreuse;
         }
 
-        .main {
-            width: 80%;
-            margin: 20px auto;
+        main {
+            
+            background: coral;
         }
 
-        table {
-            border-spacing: 0;
-            width: 100%;
+        aside {
+
+            background: cornflowerblue;
         }
 
-        tr {
-            text-align: center;
-        }
-
-        th {
-            padding: 10px;
-        }
-
-        table tbody tr:nth-child(odd) {
-            background-color: #eee
-        }
-
-        table thead {
-            background-color: rgb(255, 51, 0);
-            color: white;
-        }
-
-        table thead th:first-child {
-            border-radius: 5px 0 0 0;
-            border: 1px solid blue;
-        }
-
-        table thead th:last-child {
-            border-radius: 0 5px 0 0;
-            border-right: 1px solid blue;
-        }
-
-        table tbody tr:last-child td:first-child {
-            border-radius: 0 0 0 5px;
-        }
-
-        table tbody tr:last-child td:last-child {
-            border-radius: 0 0 5px 0;
+        footer {
+            background: darkgrey;
         }
     </style>
 
 </head>
 
 <body>
-    <a href="https://hafugg110.github.io/fir-/Exercise/index.html" , target="blank">Exercise </a>
-    <t> </t>
-    <a href="https://hafugg110.github.io/fir-/Lab/index.html" , target="blank">Lab </a>
-    <hr />
+    <header>
+        header
+        <a href="https://hafugg110.github.io/fir-/Exercise/index.html" , target="blank">Exercise </a>
+        <a href="https://hafugg110.github.io/fir-/Lab/index.html" , target="blank">Lab </a>
+    </header>
+    <main>
+        <div class="box">
+            <div>Text1</div>
+            <div>Text2</div>
+            <div>Text3</div>
+            <div>Text4</div>
+            <div>Text5</div>
+            <div>Text6</div>
+            <div>Text7</div>
 
-
-
-
-
-    <body>
-
-        <body>
-           
-            <h1>Text-shadow effect!</h1>
-
-            <div class="main">
+        </div>
+        <!-- <div class="main">
                 <table>
                     <thead>
                         <th>Country</th>
@@ -114,9 +90,14 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-        </body>
-
+            </div> -->
+        <aside>
+            aside
+        </aside>
+    </main>
+    <footer>
+        footer
+    </footer>
+</body>
 
 </html>
