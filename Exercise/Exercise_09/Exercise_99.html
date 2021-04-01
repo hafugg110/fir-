@@ -1,89 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <div>資產負債表</div>
-    <div>資產</div>
-    <div>負債及股東權益</div>
-    <div>
-        <div>流動資產</div>
-        <div>
-            <div>現金</div>
-            <div>存貨</div>
-            <div>應收帳款</div>
-            <div></div>
-        </div>
-        <div>
-            <div>399,526</div>
-            <div>819,954</div>
-            <div>945,494</div>
-            <div>2,164,974</div>
-        </div>
-        <div>
-            <div>流動負債</div>
-            <div>
-                <div>短期借款</div>
-                <div></div>
-                <div>應付帳款</div>
-            </div> 
-            <div>
-                <div>1,634,870</div>
-                <div>1,912,740</div>
-                <div>277,870</div>
-            </div> 
-            <div>
-                <div>非流動負債</div>
-                <div>長期借款</div>
-                <div>69,600</div>
-            </div>
-            <div>
-                <div>非流動資產</div>
-                <div>固定資產</div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div>1,361,096</div>
-                    <div></div>
-                </div>
-            </div>
-            <div>
-                <div>負債合計</div>
-                <div></div>
-                <div>1,982,340</div>
-            </div>
-            <div>
-                <div>
-                    <div>股東權益</div>
-                    <div>股東權益合計</div>
-                </div>
-                <div>
-                    <div>股本</div>>
-                    <div>保留盈餘</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>1,102,186</div>
-                    <div>441,544</div>
-                    <div>1,543,730</div>
-                </div>
-            </div>
-            <div>
-                <div>資產合計</div>
-                <div></div>
-                <div>3,526,070</div>
-            </div>     
-            <div>
-                <div>負債及股東權益</div>
-                <div></div>
-                <div>3,526,070</div>
-            </div>
-        </div>
-    </div>
+    <style>
+        * {
+            border: 1 solid #E1E1E1;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        div{
+            border: 1px solid #E1E1E1;
+            border-collapse: collapse;
+            border-width: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(11, 1fr);
 
+        }
+
+        .cap {
+            grid-column: 1/7;
+            background-color: #B5E3FF;
+            border:0 1px 0 0;
+        }
+
+        .head1 {
+            grid-column: 1 / 4;
+            background-color: #FFFF00;
+            border:black solid;
+        }
+
+        .head2 {
+            grid-column: 4 / 7;
+            background-color: #FFFF00;
+            border:black solid;
+        }
+
+        .green {
+            grid-area: 3/1/7/2;
+            background-color: #9ACD32;
+        }
+
+        .flow1 {
+            grid-area: 3/4/6/5;
+            background-color: #FFB6C1;
+        }
+
+        .-sum {
+            background-color: #FFB6C1;
+        }
+
+        .nflow {
+            grid-area: 7/1/11/2;
+            background-color: #FF00FF;
+        }
+
+        .st {
+            grid-area: 7/2/11/3;
+            background-color: #008000;
+        }
+
+        .c2 {
+            grid-area: 8/4/10/5;
+            background-color: #32CD32;
+        }
+
+        .stocksum {
+            background-color: #32CD32;
+        }
+
+        .b1 {
+            grid-area: 11/1/12/3;
+            background-color: #FFFF00;
+        }
+
+        .b2 {
+            grid-area: 11/4/12/6;
+            background-color: #FFFF00;
+        }
+        .b3 {
+            background-color: #FFFF00;
+        }
+        .b4 {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cap">資產負債表</div>
+            <div class="head1">資產</div>
+            <div class="head2">負債及股東權益</div>
+            <div class="green">流動資產</div>
+            <div>現金</div>
+            <div>399,526</div>
+            <div class="flow1">流動負債</div>
+            <div>短期借款</div>
+            <div>1,634,870</div>
+            <div>存貨</div>
+            <div>819,954</div>
+            <div></div>
+            <div>1,912,740</div>
+            <div>應收帳款</div>
+            <div>945,494</div>
+            <div>應付帳款</div>
+            <div>277,870</div>
+            <div></div>
+            <div>2,164,974</div>
+            <div>非流動負債</div>
+            <div>長期借款</div>
+            <div>69,600</div>
+            <div class="nflow">非流動資產</div>
+            <div class="st">固定資產</div>
+            <div></div>
+            <div class="-sum">負債合計</div>
+            <div></div>
+            <div>1,982,340</div>
+            <div></div>
+            <div class="c2">股東權益</div>
+            <div>股本</div>
+            <div>1,102,186</div>
+            <div>1,361,096</div>
+            <div>保留盈餘</div>
+            <div>441,544</div>
+            <div></div>
+            <div class="stocksum">股東權益合計</div>
+            <div></div>
+            <div>1,543,730</div>
+        
+        <div class="b1">資產合計</div>
+        <div class="b3">3,526,070</div>
+        <div class="b2">負債及股東權益</div>
+        <div class="b4">3,526,070</div>
+    </div>
 </body>
+
 </html>
