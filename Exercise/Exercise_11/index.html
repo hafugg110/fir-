@@ -17,80 +17,121 @@
         header {
             display: flex;
             flex-direction: row;
-            fle;
+            justify-content: space-between;
+            align-items: center;
             height: 60px;
-            min-width: 100vw;
+            min-width: 100vw ;
+            font-size: 20px;
             background-color: #FF7F50;
         }
 
+        .my {
+            color: white;
+            font-style: italic;
+            padding-left: 20px;            
+        }
+        .something{
+            
+        }
+
+        .rt {
+            display: flex;
+            font-family: DFKai-sb;
+            padding: 30px;
+
+        }
+
         .s1 {
-            width: 15vw
+            width: 15vw;
+            min-width:0
         }
 
         .s2 {
-            width: 10vw
+            width: 5vw;
+            min-width:0
         }
 
-        .something {
-            justify-content: flex-end;
-        }
+
 
         aside {
             width: 10vw;
             height: 80vh;
-            margin: 20px;
+            margin: 10px 0 0 0;
+            text-align: center;
 
         }
-        .ca{
+
+
+
+        .cla {
+            color: #6F67E7;
+            margin: -1px 0px -2px 0px;
+            font-family: DFKai-sb;
+            background-color: #FFEBCD;
+            border-color: #969696;
+            border-style: dashed;
+            border-collapse: collapse;
+            padding: 7px 0 7px 0;
+        }
+
+        .ca {
+
+            color: black;
             margin: 0;
             font-family: DFKai-sb;
             background-color: #FFEBCD;
+           border-color: #969696;
             border-style: solid;
+            padding: 7px 0 7px 0;
         }
-        .cla{
-            margin: 0px 0px -1px 0px;
-            font-family: DFKai-sb;
-            background-color: #FFEBCD;
-            border-style: dashed;
-            border-collapse: collapse;
-        }
+
         main {
-            width: 55vw;
+            max-width: 55vw;
             border: gray;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            margin: 10px;
             height: 80vh;
         }
 
         .c1 {
-            padding: 10px;
-            border:solid #E2E2E2;
-            margin: 10px;            
+            border: solid #E2E2E2;
+            margin: 10px 10px 10px 10px;
         }
-        .text{
+
+        .col {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .text {
             font-family: DFKai-sb;
             font-size: 2px;
         }
+
         .add {
             background-color: #EFEFEF;
             /* Green */
-            border: none;
+            border: 1px black;
             color: rgb(0, 0, 0);
             padding: 3px 6px;
             text-align: center;
-            text-decoration: none;
             display: inline-block;
             font-size: 2px;
             justify-self: right;
         }
-        .price{
-            font-style:italic ;
+
+        .price {
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
             font-size: 30px;
+            font-weight: bold;
         }
+
         footer {
             justify-content: flex-end;
+            text-align: center;
             order: 2;
             min-width: 100vw;
             height: 30px;
@@ -103,8 +144,10 @@
 <body>
     <header>
         <div class="my">MyShop</div>
-        <div class="something">商品</div>
-        <div class="buy">購物車</div>
+        <div class="rt">
+            <div class="something">商品</div>
+            <div class="buy">購物車</div>
+        </div>
     </header>
     <div class="s1"></div>
     <aside>
@@ -117,32 +160,43 @@
     <main>
         <div class="c1">
             <div><img src="https://i.imgur.com/ZMpETy0b.gif " alt="三層蛋糕"></div>
-            <div class="text">蛋糕</div>
-            <div class="add">放入購物車</div>
+            <div class="col">
+                <div class="text">蛋糕</div>
+                <div class="add">放入購物車</div>
+            </div>
             <div class="price">NT$ 150</div>
+        </div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/ODZ7Zpzb.jpg" alt="奶昔"></div>
-            <div class="text">滿滿的點心</div>
-            <div class="add">放入購物車</div>
+            <div class="col">
+                <div class="text">滿滿的點心</div>
+                <div class="add">放入購物車</div>
+            </div>
             <div class="price">NT$ 300</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/qT3MWAbb.jpg" alt="紅色蛋糕"></div>
-            <div class="text">紅色的</div>
-            <div class="add">放入購物車</div>
+            <div class="col">
+                <div class="text">紅色的</div>
+                <div class="add">放入購物車</div>
+            </div>
             <div class="price">NT$ 666</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/2G16qPab.jpg" alt="起司蛋糕"></div>
-            <div class="text">蛋糕</div>
-            <div class="add">放入購物車</div>
+            <div class="col">
+                <div class="text">蛋糕</div>
+                <div class="add">放入購物車</div>
+            </div>
             <div class="price">NT$ 85</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/fziT4jzb.gif" alt="魔方蛋糕"></div>
-            <div class="text">魔術方塊?</div>
-            <div class="add">放入購物車</div>
+            <div class="col">
+                <div class="text">魔術方塊?</div>
+                <div class="add">放入購物車</div>
+            </div>
             <div class="price">NT$ 999</div>
         </div>
     </main>
