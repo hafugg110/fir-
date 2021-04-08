@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise11</title>
     <style>
-        body{
+        body {
             display: flex;
-            flex-direction:row;
+            flex-direction: row;
             margin: 0;
             flex-wrap: wrap;
         }
-        header{
+
+        header {
             display: flex;
             flex-direction: row;
+            fle;
             height: 60px;
             min-width: 100vw;
             background-color: #FF7F50;
         }
-        .something{
+
+        .s1 {
+            width: 15vw
+        }
+
+        .s2 {
+            width: 10vw
+        }
+
+        .something {
             justify-content: flex-end;
         }
-        aside{
-            width: 30vw;
+
+        aside {
+            width: 10vw;
             height: 80vh;
-            background-color: #FFEBCD;
-            
+            margin: 20px;
+
         }
-        main{
-            width: 60vw;
+        .ca{
+            margin: 0;
+            font-family: DFKai-sb;
+            background-color: #FFEBCD;
+            border-style: solid;
+        }
+        .cla{
+            margin: 0px 0px -1px 0px;
+            font-family: DFKai-sb;
+            background-color: #FFEBCD;
+            border-style: dashed;
+            border-collapse: collapse;
+        }
+        main {
+            width: 55vw;
             border: gray;
             display: flex;
             flex-direction: row;
@@ -37,10 +63,35 @@
             margin: 10px;
             height: 80vh;
         }
-        .c1{
+
+        .c1 {
             padding: 10px;
+            border:solid #E2E2E2;
+            margin: 10px;            
         }
-        footer{
+        .text{
+            font-family: DFKai-sb;
+            font-size: 2px;
+        }
+        .add {
+            background-color: #EFEFEF;
+            /* Green */
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 3px 6px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2px;
+            justify-self: right;
+        }
+        .price{
+            font-style:italic ;
+            font-size: 30px;
+        }
+        footer {
+            justify-content: flex-end;
+            order: 2;
             min-width: 100vw;
             height: 30px;
             color: white;
@@ -48,53 +99,57 @@
         }
     </style>
 </head>
+
 <body>
     <header>
-        <div>MyShop</div>
+        <div class="my">MyShop</div>
         <div class="something">商品</div>
         <div class="buy">購物車</div>
     </header>
+    <div class="s1"></div>
     <aside>
-        <div>商品分類</div>
-        <div>所有商品</div>
-        <div>暢銷商品</div>
-        <div>本日精選</div>
-        <div>新品上市</div>
+        <div class="ca">商品分類</div>
+        <div class="cla">所有商品</div>
+        <div class="cla">暢銷商品</div>
+        <div class="cla">本日精選</div>
+        <div class="cla">新品上市</div>
     </aside>
     <main>
         <div class="c1">
             <div><img src="https://i.imgur.com/ZMpETy0b.gif " alt="三層蛋糕"></div>
-            <div>蛋糕</div>
-            <div>放入購物車</div>
-            <div>NT$ 150</div>
+            <div class="text">蛋糕</div>
+            <div class="add">放入購物車</div>
+            <div class="price">NT$ 150</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/ODZ7Zpzb.jpg" alt="奶昔"></div>
-            <div>滿滿的點心</div>
-            <div>放入購物車</div>
-            <div>NT$ 300</div>
+            <div class="text">滿滿的點心</div>
+            <div class="add">放入購物車</div>
+            <div class="price">NT$ 300</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/qT3MWAbb.jpg" alt="紅色蛋糕"></div>
-            <div>紅色的</div>
-            <div>放入購物車</div>
-            <div>NT$ 666</div>
+            <div class="text">紅色的</div>
+            <div class="add">放入購物車</div>
+            <div class="price">NT$ 666</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/2G16qPab.jpg" alt="起司蛋糕"></div>
-            <div>蛋糕</div>
-            <div>放入購物車</div>
-            <div>NT$ 85</div>
+            <div class="text">蛋糕</div>
+            <div class="add">放入購物車</div>
+            <div class="price">NT$ 85</div>
         </div>
         <div class="c1">
             <div><img src="https://i.imgur.com/fziT4jzb.gif" alt="魔方蛋糕"></div>
-            <div>魔術方塊?</div>
-            <div>放入購物車</div>
-            <div>NT$ 999</div>
+            <div class="text">魔術方塊?</div>
+            <div class="add">放入購物車</div>
+            <div class="price">NT$ 999</div>
         </div>
     </main>
+    <div class="s2"></div>
     <footer>
         <div>@2021 MyShop All right reserved</div>
     </footer>
 </body>
+
 </html>
