@@ -18,18 +18,87 @@
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto;
+            flex-wrap: nowrap;
         }
 
         #header {
+            align-items: center;
             background-color: #FF7F50;
+            height: max-content;
+            padding: 5px;
+            font-size: 1.5rem;
+        }
+
+        #t1 {
+            font-style: italic;
+            font-family: sans-serif;
+            font-weight: 600;
+            color: white;
+
+        }
+
+        #t2,
+        #t3 {
+            font-family: DFKai-SB;
+            text-decoration: none;
+        }
+
+        #i {
+            /* border-style: ridge; */
+            border: solid #D6D6D6;
+            margin: 15px;
+            padding-right: 0;
+            padding-left: 0;
+            width: max-content;
+            flex-wrap: nowrap;
+            text-align: center;
         }
 
         #aside {
             background-color: #FFEBCD;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+            min-width: 6vw;
+            height: max-content;
+            padding: 0;
+        }
+
+        .cla {
+            border: solid black;
+            padding: 10px 0 10px 0;
+        }
+
+        .as {
+            border: dashed black;
+            margin: 0px 0px -2px 0px;
+            padding: 10px 0 10px 0;
         }
 
         #footer {
             background-color: #808080;
+            text-align: center;
+            font-family: sans-serif;
+            font-style: italic;
+            color: white;
+            height: 40px;
+            height: max-content;
+            padding: 10px;
+        }
+
+        button {
+            font-size: 1px;
+            text-align: end;
+        }
+
+        .p {
+            font-size: 1px;
+        }
+
+        .price {
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
         }
     </style>
 </head>
@@ -37,54 +106,61 @@
 <body>
     <div class="container-fluid">
         <div id="header" class="row">
-            <div class="col-10">MyShop</div>
-            <div class="col-1">商品</div>
-            <div class="col-1">購物車</div>
+            <div id="t1" class="col-1">MyShop</div>
+            <div class="col-9"></div>
+            <a id="t2" class="col-1 text-end p-1" href="#">商品</a>
+            <a id="t3" class="col-1 text-start p-1" href="#">購物車</a>
+
         </div>
         <div class="row">
             <div class="col-2"></div>
             <div id="aside" class="col-1">
-                <div>商品分類</div>
-                <div>所有商品</div>
-                <div>暢銷商品</div>
-                <div>本日精選</div>
-                <div>新品上市</div>
+                <div class="cla">商品分類</div>
+                <div class="as">所有商品</div>
+                <div class="as">暢銷商品</div>
+                <div class="as">本日精選</div>
+                <div class="as">新品上市</div>
             </div>
             <div id="main" class="col-7">
-                <div class="column">
-                    <div class="col">
-                        <div><img src="https://i.imgur.com/ZMpETy0b.gif " alt="三層蛋糕"></div>
-                        <div>蛋糕</div>
-                        <div>放入購物車</div>
-                        <div>NT$ 150</div>
+                <div class="row">
+                    <div id="i" class="col-3">
+                        <div id="1"><img src="https://i.imgur.com/ZMpETy0b.gif" class="img-fluid " alt="三層蛋糕"></div>
+                        <div class="p ">蛋糕
+                            <button>放入購物車</button>
+                        </div>
+                        <div class="price">NT$ 150</div>
                     </div>
-                    <div class="col">
-                        <div><img src="https://i.imgur.com/ODZ7Zpzb.jpg" alt="奶昔"></div>
-                        <div>滿滿的點心</div>
-                        <div>放入購物車</div>
-                        <div>NT$ 300</div>
+                    <div id="i" class="col-3">
+                        <div id="2"><img src="https://i.imgur.com/ODZ7Zpzb.jpg" class="img-fluid" alt="奶昔"></div>
+                        <div class="p">滿滿的點心
+                            <button>放入購物車</button>
+                        </div>
+                        <div class="price">NT$ 300</div>
                     </div>
-                    <div class="col">
-                        <div><img src="https://i.imgur.com/qT3MWAbb.jpg" alt="紅色蛋糕"></div>
-                        <div>紅色的</div>
-                        <div>放入購物車</div>
-                        <div>NT$ 666</div>
+                    <div id="i" class="col-3">
+                        <div id="3"><img src="https://i.imgur.com/qT3MWAbb.jpg" class="img-fluid" alt="紅色蛋糕"></div>
+                        <div class="p">紅色的
+                            <button>放入購物車</button>
+                        </div>
+                        <div class="price">NT$ 666</div>
                     </div>
-                    <div class="col">
-                        <div><img src="https://i.imgur.com/2G16qPab.jpg" alt="起司蛋糕"></div>
-                        <div>蛋糕</div>
-                        <div>放入購物車</div>
-                        <div>NT$ 85</div>
+                    <div id="i" class="col-3">
+                        <div id="4"><img src="https://i.imgur.com/2G16qPab.jpg" class="img-fluid" alt="起司蛋糕"></div>
+                        <div class="p">蛋糕
+                            <button>放入購物車</button>
+                        </div>
+                        <div class="price">NT$ 85</div>
                     </div>
-                    <div class="col">
-                        <div><img src="https://i.imgur.com/fziT4jzb.gif" alt="魔方蛋糕"></div>
-                        <div>魔術方塊?</div>
-                        <div>放入購物車</div>
-                        <div>NT$ 999</div>
+                    <div id="i" class="col-3">
+                        <div id="5"><img src="https://i.imgur.com/fziT4jzb.gif" class="img-fluid" alt="魔方蛋糕"></div>
+                        <div class="p">魔術方塊?
+                            <button>放入購物車</button>
+                        </div>
+                        <div class="price">NT$ 999</div>
                     </div>
                 </div>
             </div>
-            <div class="col-2"></div>
+            <div class="col-1"></div>
             <div id="footer">
                 <div>
                     <div>@2021 MyShop All right reserved</div>
