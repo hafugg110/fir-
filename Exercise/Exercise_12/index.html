@@ -1,73 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise12</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <style>
-       body{
+        body {
             display: grid;
             margin: 0;
         }
-        header{
+
+        .container-fluid {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+
+        #header {
             background-color: #FF7F50;
         }
-        aside{
+
+        #aside {
             background-color: #FFEBCD;
         }
-        footer{
+
+        #footer {
             background-color: #808080;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div>MyShop</div>
-        <div>商品</div>
-        <div>購物車</div>
-    </header>
-    <aside>
-        <div>商品分類</div>
-        <div>所有商品</div>
-        <div>暢銷商品</div>
-        <div>本日精選</div>
-        <div>新品上市</div>
-    </aside>
-    <main>
-        <div>
-            <div><img src="https://i.imgur.com/ZMpETy0b.gif " alt="三層蛋糕"></div>
-            <div>蛋糕</div>
-            <div>放入購物車</div>
-            <div>NT$ 150</div>
+    <div class="container-fluid">
+        <div id="header" class="row">
+            <div class="col-10">MyShop</div>
+            <div class="col-1">商品</div>
+            <div class="col-1">購物車</div>
         </div>
-        <div>
-            <div><img src="https://i.imgur.com/ODZ7Zpzb.jpg" alt="奶昔"></div>
-            <div>滿滿的點心</div>
-            <div>放入購物車</div>
-            <div>NT$ 300</div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div id="aside" class="col-1">
+                <div>商品分類</div>
+                <div>所有商品</div>
+                <div>暢銷商品</div>
+                <div>本日精選</div>
+                <div>新品上市</div>
+            </div>
+            <div id="main" class="col-7">
+                <div class="column">
+                    <div class="col">
+                        <div><img src="https://i.imgur.com/ZMpETy0b.gif " alt="三層蛋糕"></div>
+                        <div>蛋糕</div>
+                        <div>放入購物車</div>
+                        <div>NT$ 150</div>
+                    </div>
+                    <div class="col">
+                        <div><img src="https://i.imgur.com/ODZ7Zpzb.jpg" alt="奶昔"></div>
+                        <div>滿滿的點心</div>
+                        <div>放入購物車</div>
+                        <div>NT$ 300</div>
+                    </div>
+                    <div class="col">
+                        <div><img src="https://i.imgur.com/qT3MWAbb.jpg" alt="紅色蛋糕"></div>
+                        <div>紅色的</div>
+                        <div>放入購物車</div>
+                        <div>NT$ 666</div>
+                    </div>
+                    <div class="col">
+                        <div><img src="https://i.imgur.com/2G16qPab.jpg" alt="起司蛋糕"></div>
+                        <div>蛋糕</div>
+                        <div>放入購物車</div>
+                        <div>NT$ 85</div>
+                    </div>
+                    <div class="col">
+                        <div><img src="https://i.imgur.com/fziT4jzb.gif" alt="魔方蛋糕"></div>
+                        <div>魔術方塊?</div>
+                        <div>放入購物車</div>
+                        <div>NT$ 999</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+            <div id="footer">
+                <div>
+                    <div>@2021 MyShop All right reserved</div>
+                </div>
+            </div>
         </div>
-        <div>
-            <div><img src="https://i.imgur.com/qT3MWAbb.jpg" alt="紅色蛋糕"></div>
-            <div>紅色的</div>
-            <div>放入購物車</div>
-            <div>NT$ 666</div>
-        </div>
-        <div>
-            <div><img src="https://i.imgur.com/2G16qPab.jpg" alt="起司蛋糕"></div>
-            <div>蛋糕</div>
-            <div>放入購物車</div>
-            <div>NT$ 85</div>
-        </div>
-        <div>
-            <div><img src="https://i.imgur.com/fziT4jzb.gif" alt="魔方蛋糕"></div>
-            <div>魔術方塊?</div>
-            <div>放入購物車</div>
-            <div>NT$ 999</div>
-        </div>
-    </main>
-    <footer>
-        <div>@2021 MyShop All right reserved</div>
-    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
