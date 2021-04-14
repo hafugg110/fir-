@@ -8,3 +8,7 @@ def hello_world():
 @app.route('/hello')
 def hello():
     return 'Hello!'
+
+@app.route('/hello/<name>')
+def helloname(name):   #宣告名help不能重複
+    return 'Hello, {}!'.format(name)
