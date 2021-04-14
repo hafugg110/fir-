@@ -33,5 +33,5 @@ from flask import Flask, request
 
 @app.route('/query')
 def query():
-name = request.args.get('name')
-    return 'Hello, {}!'.format(name)
+    name = request.args.get('name')
+        return 'Hello, {}!'.format(name)
