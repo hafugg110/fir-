@@ -17,3 +17,7 @@ def hello_world():
 @app.route('/hello/<name>')
 def helloname1(name):
     return 'Hello, {}!'.format(name)
+
+@app.route('/', methods=['POST', 'GET'])
+def hello_world1():      #宣告名hello_world不能重複
+    return 'Hello, World!'
