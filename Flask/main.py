@@ -29,10 +29,17 @@
 # def get_float(num):
 #     return 'Float: {}'.format(num)
 
-from flask import Flask, request
+# from flask import Flask, request
+# app = Flask(__name__)
+
+# @app.route('/query')
+# def query():
+#     name = request.args.get('name')
+#     return 'Hello, {}!'.format(name)
+
+from flask import Flask
 app = Flask(__name__)
 
-@app.route('/query')
-def query():
-    name = request.args.get('name')
-    return 'Hello, {}!'.format(name)
+@app.route('/')
+def index():
+    return '<h1>Hello, world!</h1>'
