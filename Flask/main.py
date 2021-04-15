@@ -48,3 +48,8 @@ def hello_world():
 @app.route('/hello/<name>')
 def hello(name=None):
     return render_template('index.html', name=name)
+
+@app.route('/loop')
+@app.route('/loop/<int:n>')
+def loop(n=3):
+    return render_template('index.html', n=n)
