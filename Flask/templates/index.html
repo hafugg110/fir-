@@ -22,8 +22,17 @@
         <li>i = {{ i }}</li>
         {% endfor %}
     </ul> -->
-    
-    <a href="{{ url_for('hello', name='KID') }}">Hello</a>
+
+<!-- <a href="{{ url_for('hello', name='KID') }}">Hello</a>
+    <img src="{{ url_for('static', filename='image/cat.jpg') }}"> -->
+
+{% extends "base.html" %}
+{% block title %}首頁{% endblock %}
+
+{% block content %}
+<h1>Hello, world!</h1>
+{% endblock %}
+
 
 <!-- </body>
 
