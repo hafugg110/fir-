@@ -37,28 +37,51 @@
 #     name = request.args.get('name')  #取得透過GET方式傳送來的name參數值
 #     return 'Hello, {}!'.format(name)
 
-from flask import Flask
-from flask import render_template
+# from flask import Flask
+# from flask import render_template
+# app = Flask(__name__)
+# app = Flask(__name__, static_url_path='/image', static_folder='image')
+
+# @app.route('/', methods=['POST', 'GET'])
+# def hello_world():
+#     return 'Hello, World!'
+# @app.route('/hello')
+# @app.route('/hello/<name>')
+# def hello(name=None):
+#     return render_template('hello.html', name=name)
+
+# @app.route('/loop')
+# @app.route('/loop/<int:n>')
+# def loop(n=3):
+#     return render_template('loop.html', n=n)
+
+# @app.route('/bgwb')
+# def bgwp():
+#     return render_template('bgwb.html')
+
+# @app.route('/img')
+# def img():
+#     return render_template('img.html')
+
+from flask import Flask, render_template, request
 app = Flask(__name__)
-app = Flask(__name__, static_url_path='/image', static_folder='image')
 
-@app.route('/', methods=['POST', 'GET'])
-def hello_world():
-    return 'Hello, World!'
-@app.route('/hello')
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
+@app.route('/form')
+def form():
+    return '''
+        <form method="POST" action="/process">
+            <label>Input Name: <input type="text" name="name"></label>
+            <input type="submit" value="Submit">
+        </form>
+    '''
 
-@app.route('/loop')
-@app.route('/loop/<int:n>')
-def loop(n=3):
-    return render_template('loop.html', n=n)
+@app.route('/process', methods=['POST'])
+def post_form():
+    name = request.form['name']
+    return 'Hello, {}!'.format(name)
 
-@app.route('/bgwb')
-def bgwp():
-    return render_template('bgwb.html')
-
-@app.route('/img')
-def img():
-    return render_template('img.html')
+# @app.route("/submit", methods=['POST'])
+# def submit():
+#     firstname = request.values['firstname']
+#     lastname = request.values['lastname']
+#     return render_template('submit.html',**locals())
