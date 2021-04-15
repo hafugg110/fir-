@@ -56,4 +56,4 @@ def loop(n=3):
 
 @app.route('/bgwb')
 def bgwp():
-    return render_template('bgwp.html')
+    return render_template('bgwb.html')
