@@ -40,6 +40,7 @@
 from flask import Flask
 from flask import render_template
 app = Flask(__name__)
+app = Flask(__name__, static_url_path='/image', static_folder='image')
 
 @app.route('/', methods=['POST', 'GET'])
 def hello_world():
