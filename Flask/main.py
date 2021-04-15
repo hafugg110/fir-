@@ -53,3 +53,7 @@ def hello(name=None):
 @app.route('/loop/<int:n>')
 def loop(n=3):
     return render_template('loop.html', n=n)
+
+@app.route('/bgwb')
+def bgwp():
+    return render_template('bgwp.html')
