@@ -57,3 +57,7 @@ def loop(n=3):
 @app.route('/bgwb')
 def bgwp():
     return render_template('bgwb.html')
+
+@app.route('/img')
+def img():
+    return render_template('img.html')
