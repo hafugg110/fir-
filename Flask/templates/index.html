@@ -15,14 +15,15 @@
     <h1>Hello, {{ name }}!</h1>
     {% else %}
     <h1>Hello!</h1>
-    {% endif %} -->
+    {% endif %}
 
     <ul>
         {% for i in range(n) %}
         <li>i = {{ i }}</li>
         {% endfor %}
-    </ul>
-
+    </ul> -->
+    
+    <a href="{{ url_for('hello', name='KID') }}">Hello</a>
 
 </body>
 
