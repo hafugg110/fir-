@@ -47,9 +47,9 @@ def hello_world():
 @app.route('/hello')
 @app.route('/hello/<name>')
 def hello(name=None):
-    return render_template('index.html', name=name)
+    return render_template('hello.html', name=name)
 
 @app.route('/loop')
 @app.route('/loop/<int:n>')
 def loop(n=3):
-    return render_template('index.html', n=n)
+    return render_template('loop.html', n=n)
