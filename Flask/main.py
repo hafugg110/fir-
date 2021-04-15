@@ -29,12 +29,12 @@
 # def get_float(num):
 #     return 'Float: {}'.format(num)
 
-# from flask import Flask, request
+# from flask import Flask, request  
 # app = Flask(__name__)
 
 # @app.route('/query')
 # def query():
-#     name = request.args.get('name')
+#     name = request.args.get('name')  #取得透過GET方式傳送來的name參數值
 #     return 'Hello, {}!'.format(name)
 
 from flask import Flask
