@@ -154,3 +154,16 @@ def create_task():
         "success": True,
         "data": task
     }), 201
+
+    @app.route('/tasks/<int:task_id>/')
+    def get_tasks(task_id):
+        task = tasks.get(task_id)
+        if not task:
+            return json.dumps({
+                "success": False,
+                "error": "Task not found"
+            }), 404
+        return json.dumps({
+            "success": True,
+            "data": task
+        }), 200
