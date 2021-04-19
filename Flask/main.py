@@ -1,3 +1,101 @@
+import json
+from flask import Flask, request, jsonify
+app = Flask(__name__)
+
+tasks = {
+    0:{
+        'id': 0,
+        'description': 'todo-1',
+        'done': False
+    },
+    1:{
+        'id': 1,
+        'description': 'todo-2',
+        'done': False
+    }
+}
+#定義清單計數器
+take_id_counter = 2
+# 新增一個 route
+
+@app.route('/')
+@app.route('/tasks/')
+def get_tasks():
+    res = {
+        'success':True,
+        'data':list(tasks.values())
+    }
+    return jsonify(res)
+
+#新增todo項目
+@app.route('/tasks/', methods=['POST'])
+def create_task():
+    #讓計數器可以被全域讀取
+    global task_id_counter
+    #將取得的資料以 json 載入
+    body = json.loads(request.data)
+    #指定拿取 description , 若無則顯示 no description
+    description = body.get("description", "no description")
+    #開始建立新的清單內容
+    task = {"id": task_id_counter,
+            "description": description,    
+            "done": False}
+    #將清單內容增加回 task 清單中
+    tasks[task_id_counter] = task
+    task_id_counter += 1
+    return json.dumps({
+        "success": True,
+        "data": task
+    }), 201
+    #取得特定 id 內容
+
+@app.route('/tasks/<int:task_id>/')
+def get_task(task_id):
+    task = tasks.get(task_id)
+    if not task:
+        return json.dumps({
+            "success": False,
+            "error": "Task not found"
+        }), 404
+    return json.dumps({           
+        "success": True,
+        "data": task
+    }), 200
+
+#更新特定id內容
+@app.route('/tasks/<int:task_id>/' , methods=['POST'])
+def update_task(task_id):
+    task = tasks.get(task_id)
+    if not task:
+        return json.dumps({
+                "success": False,
+                "error": "Task not found"
+        }), 404
+    body = json.loads(request.data)
+    description = body.get("description")
+    if description:
+        task['description'] = description
+    task['done'] = body.get("done", False)
+    return json.dumps({
+        "success": True,
+        "data": task
+    }), 200
+
+#刪除特定 id 清單
+@app.route('/tasks/<int:task_id>/', methods=['DELETE'])
+def delete_task(task_id):
+    task = tasks.get(task_id)
+    if not task:
+        return json.dumps({
+             "success": False,
+             "error": "Task not found"
+        }), 404
+    del tasks[task_id]
+    return json.dumps({
+        "success": True,
+        "data": task
+    }), 200
+
 # from flask import Flask
 # app = Flask(__name__)
 
@@ -106,93 +204,3 @@
 #     lastname = request.values['lastname']
 #     return render_template('submit.html',**locals())
 
-import json
-from flask import Flask, request, jsonify
-app = Flask(__name__)
-
-tasks = {
-    0:{
-        'id': 0,
-        'description': 'todo-1',
-        'done': False
-    },
-    1:{
-        'id': 1,
-        'description': 'todo-2',
-        'done': False
-    }
-}
-#定義清單計數器
-take_id_coounter = 2
-
-@app.route('/')
-@app.route('/tasks/')
-def get_tasks():
-    res = {
-        'success':True,
-        'data':list(tasks.values())
-    }
-    return jsonify(res)
-
-#新增todo項目
-@app.route('/tasks/', methods=['POST'])
-def create_task():
-    #讓計數器可以被全域讀取
-    global task_id_counter
-    #將取得的資料以 json 載入
-    body = json.loads(request.data)
-    #指定拿取 description , 若無則顯示 no description
-    description = body.get("description", "no description")
-    #開始建立新的清單內容
-    task = {"id": take_id_coounter,
-            "description": description,    
-            "done": False}
-    #將清單內容增加回 task 清單中
-    tasks[take_id_coounter] = task
-    take_id_coounter += 1
-    return json.dumps({
-        "success": True,
-        "data": task
-    }), 201
-
-    @app.route('/tasks/<int:task_id>/')
-    def get_tasks(task_id):
-        task = tasks.get(task_id)
-        if not task:
-            return json.dumps({
-                "success": False,
-                "error": "Task not found"
-            }), 404
-        return json.dumps({
-            "success": True,
-            "data": task
-        }), 200
-#更新特定id內容
-@app.route('/tasks/<int:task_id>/' , methods=['POST'])
-def update_task(task_id):
-    task = tasks.get(task_id)
-    if not task:
-        return json.dumps({
-                "success": False,
-                "error": "Task not found"
-        }), 404
-    body = json.loads(request.data)
-    description = body.get("done", False)
-    return json.dumps({
-        "success": True,
-        "data": task
-    }), 200
-#刪除特定 id 清單
-@app.route('/tasks/<int:task_id>/', methods=['DELETE'])
-def delete_task(task_id):
-    task = tasks.get(task_id)
-    if not task:
-        return json.dumps({
-             "success": False,
-             "error": "Task not found"
-        }), 404
-    del tasks[task_id]
-    return json.dumps({
-        "success": True,
-        "data": task
-    }), 200
