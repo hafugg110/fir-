@@ -182,3 +182,17 @@ def update_task(task_id):
         "success": True,
         "data": task
     }), 200
+#刪除特定 id 清單
+@app.route('/tasks/<int:task_id>/', methods=['DELETE'])
+def delete_task(task_id):
+    task = tasks.get(task_id)
+    if not task:
+        return json.dumps({
+             "success": False,
+             "error": "Task not found"
+        }), 404
+    del tasks[task_id]
+    return json.dumps({
+        "success": True,
+        "data": task
+    }), 200
