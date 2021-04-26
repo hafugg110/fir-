@@ -1,13 +1,14 @@
-from flask import Flask, request, jsonify, render_template, make_response
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-app = Flask(__name__)
+#4/20
+# from flask import Flask, request, jsonify, render_template, make_response
+# import cv2
+# import numpy as np
+# import matplotlib.pyplot as plt
+# app = Flask(__name__)
 
-@app.route('/')
-def index():
-    # 顯示表單
-    return render_template('form.html')
+# @app.route('/')
+# def index():
+#     # 顯示表單
+#     return render_template('form.html')
 
 #讀取圖片
 # @app.route('/', methods=['POST'])
@@ -56,29 +57,29 @@ def index():
 #     response.mimetype = 'image/jpg'
 
 #     return response
-
+#4/20
 #處理圖片
-@app.route('/', methods=['POST'])
-def process():
-    # 取得上傳的圖片
-    file1 = request.files['image1']
-    # 讀取檔案內容
-    file1_content = file1.read()
-    # 將檔案內容轉為 Numpy Array
-    npimg1 = np.fromstring(file1_content, np.uint8)
-    # 將 Numpy Array 進行圖像解碼
-    # _ , buffer = cv2.imencode('.jpg', bgr1)
-    # response = make_response(buffer.tobytes())
-    # response.mimetype = 'image/jpg'
+# @app.route('/', methods=['POST'])
+# def process():
+#     # 取得上傳的圖片
+#     file1 = request.files['image1']
+#     # 讀取檔案內容
+#     file1_content = file1.read()
+#     # 將檔案內容轉為 Numpy Array
+#     npimg1 = np.fromstring(file1_content, np.uint8)
+#     # 將 Numpy Array 進行圖像解碼
+#     # _ , buffer = cv2.imencode('.jpg', bgr1)
+#     # response = make_response(buffer.tobytes())
+#     # response.mimetype = 'image/jpg'
 
-    rgb1 = cv2.cvtColor(bgr1, cv2.COLOR_BGR2RGB)
-    height, width = rgb1.shape[:2]
-    radius = int(min(height, width) * 0.48)
-    thickness = int(min(height, width) * 0.02)
-    cv2.circle(rgb1, (int(width / 2), int(height / 2)), radius, (255, 0, 0), thickness)
-    bgr1 = cv2.cvtColor(rgb1, cv2.COLOR_BGR2RGB)
+#     rgb1 = cv2.cvtColor(bgr1, cv2.COLOR_BGR2RGB)
+#     height, width = rgb1.shape[:2]
+#     radius = int(min(height, width) * 0.48)
+#     thickness = int(min(height, width) * 0.02)
+#     cv2.circle(rgb1, (int(width / 2), int(height / 2)), radius, (255, 0, 0), thickness)
+#     bgr1 = cv2.cvtColor(rgb1, cv2.COLOR_BGR2RGB)
 
-    return response
+#     return response
 
 #4/19
 # import json
@@ -288,3 +289,20 @@ def process():
 #     lastname = request.values['lastname']
 #     return render_template('submit.html',**locals())
 
+from flask import Flask, redirect, url_for, render_template,request
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('login.html')
+
+#redirect demo
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    if request.method == 'POST' and request.form['username'] == 'admin' :
+        return redirect(url_for('success'))
+    return redirect(url_for('index'), 302)
+
+@app.route('/success')
+def success():
+    return 'lodded in successfully'
