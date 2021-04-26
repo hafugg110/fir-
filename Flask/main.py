@@ -351,18 +351,58 @@
 #         return 'file uploaded successfully'
 
 #4/26 Flask 要求設定 SECRET_KEY 才能使用 session
-from flask import Flask, session
-import os
+# from flask import Flask, session
+# import os
+# app = Flask(__name__)
+# app.config['SECRET_KEY'] = os.urandom(24)
+
+# @app.route('/get')
+# def get():
+#     name = session.get('name')
+#     return 'session wiht name "name" is "{}"'.format(name)
+
+# @app.route('/set')
+# def set():
+#     name = 'KID'
+#     session['name'] = name
+#     return 'session with name is set to "{}"'.format(name)
+
+#4/26 由於是在客戶端，建立回應並告知客戶端更新 Cookie
+# from flask import Flask,  request, Response
+# import time
+# app = Flask(__name__)
+
+# @app.route('/get')
+# def get():
+#     name =  request.cookies.get('name')
+#     return 'cookies with name "name" is "{}"'.format(name)
+
+# @app.route('/set')
+# def set():
+#     name = 'KID'
+#     response = make_response(
+#         'cookies with name "name" is set to "{}"'.format(name))
+#     response.set_cookie(key='name', value=name, expires=time.time()+6*60)
+#     return response
+
+#4/26
+#載入index.html 的route
+from flask import Flask, render_template, request, make_response
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
 
-@app.route('/get')
-def get():
-    name = session.get('name')
-    return 'session wiht name "name" is "{}"'.format(name)
-
-@app.route('/set')
-def set():
-    name = 'KID'
-    session['name'] = name
-    return 'session with name is set to "{}"'.format(name)
+@app.route("/")
+def index():
+    return render_template('index.html')
+#加入 /setcookie 這個 route
+@app.route('/setcookie', methods = ['POST', 'GET'])
+def setcookie():
+    if request.method == 'POST':
+        user = request.form['userid']
+    resp = make_response(render_template('readcookie.html'))
+    resp.set_cookie('userID', user)
+    return resp
+#加入 /getcookie 這個 route
+@app.route('/getcookie')
+def getcookie():
+    name = request.cookies.get('userID')
+    return '<h1>welcome ' + name + '<h1>'

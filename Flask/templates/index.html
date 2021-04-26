@@ -26,12 +26,12 @@
 <!-- <a href="{{ url_for('hello', name='KID') }}">Hello</a>
     <img src="{{ url_for('static', filename='image/cat.jpg') }}"> -->
 
-{% extends "base.html" %}
+<!-- {% extends "base.html" %}
 {% block title %}首頁{% endblock %}
 
 {% block content %}
 <h1>Hello, world!</h1>
-{% endblock %}
+{% endblock %} -->
 
  <!-- <div class="container">
     <table class="table table-bordered table-hover"> <!--要加入css
@@ -57,3 +57,14 @@
 <!-- </body>
 
 </html> -->
+
+<!-- 4/26 建立 index.html，取得 userid -->
+<!DOCTYPE html>
+<body>
+    <form action="/setcookie" method="POST">
+        <h1>Enter userID</h1>
+        <p><input class="form-control" type="text" name="userid" /></p>
+        <p><input type="sumbit" value="Login" /></p>
+    </form>
+</body>
+</html>
