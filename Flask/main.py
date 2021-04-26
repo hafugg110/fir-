@@ -331,21 +331,38 @@
 #     return 'logged in successfully'
 
 #4/26 使用 secure_filename() 取得正確的上傳檔名
-from flask import Flask, render_template, request
-from werkzeng.utils import secure_filename
+# from flask import Flask, render_template, request
+# from werkzeng.utils import secure_filename
+# import os
+# app = Flask(__name__)
+
+# app.config['UPLOAD_FOLDER']= os.getcwd()+'/media'
+# app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 #限制大小 16MB
+
+# app.route('/')
+# def upload():
+#     return render_template('upload.html')
+
+# @app.route('/uploader', methods = ['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         f = request.files['file']
+#         f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.secure_filename)))
+#         return 'file uploaded successfully'
+
+#4/26 Flask 要求設定 SECRET_KEY 才能使用 session
+from flask import Flask, session
 import os
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.urandom(24)
 
-app.config['UPLOAD_FOLDER']= os.getcwd()+'/media'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 #限制大小 16MB
+@app.route('/get')
+def get():
+    name = session.get('name')
+    return 'session wiht name "name" is "{}"'.format(name)
 
-app.route('/')
-def upload():
-    return render_template('upload.html')
-
-@app.route('/uploader', methods = ['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST'
-        f = request.files['file']
-        f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.secure_filename)))
-        return 'file uploaded successfully'
+@app.route('/set')
+def set():
+    name = 'KID'
+    session['name'] = name
+    return 'session with name is set to "{}"'.format(name)
