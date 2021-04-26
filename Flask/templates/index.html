@@ -1,70 +1,21 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Hello, {{ name }}!</h1>
-
-    {% if name %}
-    <h1>Hello, {{ name }}!</h1>
-    {% else %}
-    <h1>Hello!</h1>
-    {% endif %}
-
-    <ul>
-        {% for i in range(n) %}
-        <li>i = {{ i }}</li>
-        {% endfor %}
-    </ul> -->
-
-<!-- <a href="{{ url_for('hello', name='KID') }}">Hello</a>
-    <img src="{{ url_for('static', filename='image/cat.jpg') }}"> -->
-
-<!-- {% extends "base.html" %}
-{% block title %}首頁{% endblock %}
-
-{% block content %}
-<h1>Hello, world!</h1>
-{% endblock %} -->
-
- <!-- <div class="container">
-    <table class="table table-bordered table-hover"> <!--要加入css
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in data %}
-            <tr>
-                <td>{{ row.name }}</td>
-                <td>{{ row.phone }}</td>
-                <td>{{ row.address }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div> -->
-
-<!-- </body>
-
-</html> -->
-
 <!-- 4/26 建立 index.html，取得 userid -->
 <!DOCTYPE html>
 <body>
     <form action="/setcookie" method="POST">
         <h1>Enter userID</h1>
-        <p><input class="form-control" type="text" name="userid" /></p>
-        <p><input type="sumbit" value="Login" /></p>
+        <p><input type="text" name="userid" /></p>
+        <p><input type="submit" value="Login" /></p>
     </form>
 </body>
 </html>
+
+<!-- 4/26 session 建立一個 index.html 取得使用者輸入的 username -->
+<!-- <html>
+<body>
+    <form action="/login" method="post">
+        <h1>Enter username</h1>
+        <p><input type="text" name="username" /></p>
+        <p><input type="sumbit" value="Login" /></p>
+    </form>
+</body>
+</html> -->

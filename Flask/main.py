@@ -368,7 +368,7 @@
 #     return 'session with name is set to "{}"'.format(name)
 
 #4/26 由於是在客戶端，建立回應並告知客戶端更新 Cookie
-# from flask import Flask,  request, Response
+# from flask import Flask,  request, Response, make_response
 # import time
 # app = Flask(__name__)
 
@@ -393,7 +393,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template('index.html')
+
 #加入 /setcookie 這個 route
+
 @app.route('/setcookie', methods = ['POST', 'GET'])
 def setcookie():
     if request.method == 'POST':
