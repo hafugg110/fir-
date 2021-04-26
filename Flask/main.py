@@ -385,26 +385,54 @@
 #     response.set_cookie(key='name', value=name, expires=time.time()+6*60)
 #     return response
 
-#4/26
+#4/26 cookie
 #載入index.html 的route
-from flask import Flask, render_template, request, make_response
+# from flask import Flask, render_template, request, make_response
+# app = Flask(__name__)
+
+# @app.route("/")
+# def index():
+#     return render_template('index.html')
+
+# #加入 /setcookie 這個 route
+
+# @app.route('/setcookie', methods = ['POST', 'GET'])
+# def setcookie():
+#     if request.method == 'POST':
+#         user = request.form['userid']
+#     resp = make_response(render_template('readcookie.html'))
+#     resp.set_cookie('userID', user)
+#     return resp
+# #加入 /getcookie 這個 route
+# @app.route('/getcookie')
+# def getcookie():
+#     name = request.cookies.get('userID')
+#     return '<h1>welcome ' + name + '<h1>'
+
+#4/26 session
+# ramdom string
+from flask import Flask, session, redirect, request, url_for, render_template
+import os
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 
-@app.route("/")
+@app.route('/')
 def index():
-    return render_template('index.html')
+    if 'username' in session:
+        username = session['username']
+        return '登入名稱:'+username+'<br>'+"<b><a href='/logout'>點此登出</a></b>"
+    return "您尚未登入<br><a href='/login'>"+"點此登入</a>"
 
-#加入 /setcookie 這個 route
-
-@app.route('/setcookie', methods = ['POST', 'GET'])
-def setcookie():
+@app.route('/login', methods=['GET', 'POST'])
+def login():
     if request.method == 'POST':
-        user = request.form['userid']
-    resp = make_response(render_template('readcookie.html'))
-    resp.set_cookie('userID', user)
-    return resp
-#加入 /getcookie 這個 route
-@app.route('/getcookie')
-def getcookie():
-    name = request.cookies.get('userID')
-    return '<h1>welcome ' + name + '<h1>'
+        session['username'] = request.form['username']
+        return redirect(url_for('index'))
+    print(session)
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    print(session)
+    return redirect(url_for('index'))
