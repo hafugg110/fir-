@@ -308,23 +308,44 @@
 # def success():
 #     return 'logged in successfully'
 
-from flask import Flask, abort, redirect, url_for, render_template,request
+#4/26 Abort example
+# from flask import Flask, abort, redirect, url_for, render_template,request
+# app = Flask(__name__)
+
+# @app.route('/')
+# def index():
+#     return render_template('login.html')
+
+# @app.route('/login', methods=['POST', 'GET'])
+# def login():
+#     if request.method == 'POST':
+#         if request.form['username'] == 'admin' :
+#             return redirect(url_for('success'))
+#         else:
+#             abort(401)
+#     else:
+#         return redirect(url_for('index'))
+
+# @app.route('/success')
+# def success():
+#     return 'logged in successfully'
+
+#4/26 使用 secure_filename() 取得正確的上傳檔名
+from flask import Flask, render_template, request
+from werkzeng.utils import secure_filename
+import os
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('login.html')
+app.config['UPLOAD_FOLDER']= os.getcwd()+'/media'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 #限制大小 16MB
 
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    if request.method == 'POST':
-        if request.form['username'] == 'admin' :
-            return redirect(url_for('success'))
-        else:
-            abort(401)
-    else:
-        return redirect(url_for('index'))
+app.route('/')
+def upload():
+    return render_template('upload.html')
 
-@app.route('/success')
-def success():
-    return 'logged in successfully'
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST'
+        f = request.files['file']
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.secure_filename)))
+        return 'file uploaded successfully'
