@@ -32,7 +32,7 @@ def addrec():
             msg = "新增失敗"
 
         finally:
-            return render_template(("result.html", msg=msg))
+            return render_template("result.html", msg=msg)
             con.colse()
 
 @app.route('/list')
