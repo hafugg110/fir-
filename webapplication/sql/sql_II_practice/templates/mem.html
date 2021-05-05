@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<body>
+
+    <form action="{{ url_for('delete_member') }}"></form>
+    <table border=1>
+        <thead>
+            <td>Delete</td>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Address </td>
+            <td>city</td>
+            <td>Pincode</td>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+            <td><input type="checkbox" id="{{ row["id"] }}" name="mem_no" value="{{ row["id"] }}"></td>
+            <td>{{ row["id"] }}</td>
+            <td>{{ row["name"] }}</td>
+            <td>{{ row["addr"] }}</td>
+            <td>{{ row["city"] }}</td>
+            <td>{{ row['pin'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Go back to home page</a>
+
+</body>
+
+</html>
