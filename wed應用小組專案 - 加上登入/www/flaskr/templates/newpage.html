@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逢甲周邊美食</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            max-width: 100vw;
+            max-height: 100vh;
+            margin: 0;
+            background-image: url('../image/back1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /*position: relative;*/
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        /* .nav {
+            margin: 20px;
+        } */
+
+        .nav-link:hover,
+        .nav-link:active {
+            color: black;
+            border-bottom: rgb(255, 196, 0) 5px solid;
+            line-height: normal;
+        }
+
+        main {
+            /* position: relative; */
+            height: 100vh;
+            width: 100vw;
+            /* overflow-y: scroll;
+            overflow-x: hidden; */
+            padding-left: 50px;
+            padding-top: 5px;
+            font-family: 'Noto Sans TC', sans-serif;
+            ;
+
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 4px;
+            padding-bottom: 0;
+            height: 10px;
+        }
+
+        .navbar {
+            min-height: 10px;
+        }
+
+        .box {
+            width: 610px;
+            height: 630px;
+            color: #5772aa;
+            text-align: center;
+            /*background: rgb(243, 239, 203);*/
+            border: 5px dashed rgb(248, 234, 172);
+            border-radius: 10px;
+            float: left;
+            margin: 10px;
+
+        }
+
+        h3 {
+            color: #4d899b;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: rgba(243, 191, 93, 0.651);
+            ;
+        }
+
+        .s {
+            overflow-y: scroll;
+            position: relative;
+            height: 80vh;
+
+        }
+    </style>
+</head>
+{% extends "base.html"%}
+{% block main1 %}
+
+<body>
+
+    <!-- <nav class="nav bg-transparent text-white" style="margin: 20px;">
+        <a class="navbar-brand" href="#"><img src="../image/beee.png" width="100px"></a>
+        <div class="mr-auto"></div>
+        <a class="nav-link active active" href="https://syuanlu.github.io/syuan-demo/小組專案/">Home</a>
+        <a class="nav-link" href="https://syuanlu.github.io/syuan-demo/小組專案/newpage.html">Collections</a>
+        <a class="nav-link" href="https://syuanlu.github.io/syuan-demo/小組專案/">Contact</a>
+
+    </nav> -->
+
+    <main>
+        <div class="row ">
+            <div class="col-3 col-md-3 col-sm-6 col-xs-6 ">
+                <nav id="navbar-example1" class="navbar-xs navbar-light " style="position: fixed;width: 230px;">
+                    <a class="navbar-brand">
+                        <h3>
+                            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
+                                width="30" height="30" class="d-inline-block align-top" alt="逢甲周邊美食">
+                            逢甲周邊美食推薦
+                        </h3>
+                        <nav class="nav nav-pills flex-column ">
+                            <a class="nav-link h5" href="#item-1" style="color: goldenrod;">🍴Restaurant</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ml-1 my-1 active" href="#item-1-1"
+                                    style="color: rgb(190, 104, 101);">不言Humble</a>
+                                <a class="nav-link ml-1 my-1" href="#item-1-2" style="color: rgb(190, 104, 101);">南洋廚坊
+                                    泰越料理</a>
+                            </nav>
+                            <a class="nav-link h5" href="#item-2" style="color: goldenrod;">🍰Dessert</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ml-1 my-1" href="#item-2-1"
+                                    style="color: rgb(190, 104, 101);">大甲芋頭城</a>
+                                <a class="nav-link ml-1 my-1" href="#item-2-2"
+                                    style="color: rgb(190, 104, 101);">御品元冰火湯圓</a>
+                                <a class="nav-link ml-1 my-1" href="#item-2-3"
+                                    style="color: rgb(190, 104, 101);">紅髮斑斑</a>
+                            </nav>
+                            <a class="nav-link h5" href="#item-3" style="color: goldenrod;">🍹Drink</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ml-1 my-1" href="#item-3-1"
+                                    style="color: rgb(190, 104, 101);">泰奶奶的</a>
+                                <a class="nav-link ml-1 my-1" href="#item-3-2"
+                                    style="color: rgb(190, 104, 101);">京沺屋</a>
+                            </nav>
+                        </nav>
+                </nav>
+            </div>
+            <div class="w-100 d-lg-none d-xl-none "></div>
+            <div class="col-6 col-md-6 col-sm-12-order-12 col-xs-12-order-12 ">
+                <div class="s">
+                    <div data-spy="scroll" data-target="#navbar-example" data-offset="0">
+                        <div class="box">
+                            <h5 id="item-1-1" style="color: darkorange;"><a
+                                    href="https://www.facebook.com/humble.pasta/" target="_blank">⭐️不言Humble</h5>
+                            <p>
+                            <div><img src="../img/01.jpg" ,alt="不言Humble" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區逢甲路88號</div>
+                            <div>👍隱藏在台中逢甲的高CP值義式料理!</div>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 id="item-1-2" style="color: darkorange;"><a
+                                    href="https://www.facebook.com/betty.0911133750/" target="_blank">⭐️南洋廚坊 泰越料理</h5>
+                            <p>
+                            <div><img src="../img/02.jpg" ,alt="南洋廚坊 泰越料理" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區逢甲路88號</div>
+                            <div>👍隱身逢甲巷弄裡，價格平實份量多，價格平實份量多，幾乎天天客滿～</div>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 id="item-2-1" style="color: darkorange;"><a href="https://www.facebook.com/dajiataro/"
+                                    target="_blank">⭐️大甲芋頭城</h5>
+                            <p>
+                            <div><img src="../img/03.jpg" alt="大甲芋頭城" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址:台中市西屯區福上巷278號</div>
+                            <div>👍選用大甲在地芋頭，平價且大碗，cp值高，推薦芋頭牛奶， 口感綿密超好喝</div>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 id="item-2-2" style="color: darkorange;"><a
+                                    href="https://www.facebook.com/Ice.Fire.Dumpling.Taichung/"
+                                    target="_blank">⭐️御品元冰火湯圓
+                            </h5>
+                            <p>
+                            <div><img src="../img/04.jpg" alt="御品元冰火湯圓" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區文華路127巷2號</div>
+                            <div>👍很特別的冰火湯圓，簡單的口味加上剉冰，冷熱交替的口感，另外還可以自己加桂花蜜與檸檬汁</div>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 id="item-2-3" style="color: darkorange;"><a
+                                    href="https://www.facebook.com/pg/%E7%B4%85%E9%AB%AE%E6%96%91%E6%96%91-111760266834127/posts/?ref=page_internal"
+                                    target="_blank">⭐️紅髮斑斑</h5>
+                            <p>
+                            <div><img src="../img\05.jpg" alt="紅髮斑斑" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區文華路127巷2號</div>
+                            <div>👍天天都要排隊的短腿阿鹿副品牌，只賣蝴蝶酥，現烤餅乾超好吃</div>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 id="item-3-1" style="color: darkorange;"><a
+                                    href="https://www.facebook.com/pages/category/Food---Beverage/%E6%B3%B0%E5%A5%B6%E5%A5%B6%E7%9A%84-Thai-GrandMas-%E9%80%A2%E7%94%B2%E5%BA%97-106213767489627/"
+                                    target="_blank">⭐️泰奶奶的</h5>
+                            <p>
+                            <div><img src="../img/06.jpg" ,alt="泰奶奶的" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區逢甲路20巷43號</div>
+                            <div>👍泰奶是現泡的，喝過的都說跟在泰國喝到的一樣，非常道地的滋味，喝過一次之後會上癮啊</div>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 id="item-3-2" style="color: darkorange;"><a
+                                    href="https://www.facebook.com/%E4%BA%AC%E6%B2%BA%E5%B1%8B-%E6%8A%B9%E8%8C%B6%E5%B0%88%E9%96%80-775995739093507/"
+                                    target="_blank">⭐️京沺屋</h5>
+                            <p>
+                            <div><img src="../img/07.jpg" ,alt="京沺屋" width="550" height="500"></div>
+                            <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區文華路129號</div>
+                            <div>👍來自台北西門町抹茶專門店，抹茶控們別錯過哦～</div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 d-lg-none d-xl-none "></div>
+            <div class="col-4 col-md-3 col-sm-6 col-xs-6 " style="position: fixed ;">
+                <h3>評論</h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Collapsible 1
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
+                            data-parent="#accordionExample" >
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    >
+                                    Collapsible 2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample" >
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree" data-parent="true">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    >
+                                    Collapsible 3
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse " aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3 wolf moon officia aute, 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $('.s').each(function () {
+            var $spy = $(this).scrollspy('refresh')
+            
+        });
+        $('#accordionExample').(function(){
+            $('.collapse').collapse()
+    </script>
+
+
+</body>
+{% endblock %}
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBee</title>
+</head>
+
+<body>
+    {% extends "base.html"%}
+    {% block main1 %}
+    <div class="main1">
+        <div class="container-fuild" style="padding-left: 80px;padding-top: 80px;">
+            <div class="row">
+                <div class="col-lg-6" style="padding-left: 150px;">
+                    <p>Let's get some food.</p>
+                    <h1 style="font-size: 70px;">good <span style="color: rgb(255, 196, 0);">food,</span><br>good mood!
+                    </h1><br>
+                    <p style="font-size: 14px; color: rgb(107, 107, 107);">With FoodBee Web Guide, you'll get the tasty
+                        food that near around the Feng Chia University! How good is that? Some of the restaurant even
+                        hide in the alley or unconspicuous, but their food it's definitely tasty and we don't want them
+                        to be forgotten, therefore FoodBee it's here for you. Hope you have a good experience.
+                    </p>
+                    <br>
+                    <a href="#bar1"><button class="button">Find food now!</button></a>
+                </div>
+                <div class="col-lg-5" style="padding-left: 80px;">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                        data-interval="3000">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                        </ol>
+                        <div class="carousel-inner" style="padding-top: 80px;">
+                            <div class="carousel-item active">
+                                <img class="a" src="../image/food1.png" class="d-block w-100" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="b" src="../image/qq.png" class="d-block" alt="">
+                            </div>
+                            <!-- <div class="carousel-item">
+                            <img src="set.jpg" class="d-block w-100" alt="">
+                        </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fuild" style="padding-top: 200px;">
+            <div class="row">
+                <!-- <div class="dcol-lg-5" id="topL">
+                <img src="rec.png">
+            </div> -->
+                <div id="yellowbar" class="col-lg-4">
+                    <div id="link-bar1" class="textpic">
+                        <a href="#bar1">
+                            <img src="../image/icon-01.png">
+                            <h3>Restaurant</h3>
+                            <p>Feeling hungry?<br>Let’s find some<br>restaurant with good food.</p>
+                        </a>
+                    </div>
+                    <div id="link-bar2" class="textpic">
+                        <a href="#bar2">
+                            <img src="../image/icon-02.png">
+                            <h3>Desert</h3>
+                            <p>Need some comfort food?<br>Go for some desert.</p>
+                        </a>
+                    </div>
+                    <div id="link-bar3" class="textpic">
+                        <a href="#bar3">
+                            <img src="../image/icon-03.png">
+                            <h3>Drink</h3>
+                            <p>A drink type? Alway won’t<br>go wrong with a drink.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="bar1" class="panel">
+                    <div class="cards">
+                        <img src="../image/food1.jpeg">
+                        <h3 style="left: 480px; top: 40px;">南洋廚坊</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; top:110px">407台中市西屯區福上巷278號</p>
+                        <p style="left: 480px; top:130px">Tel:04-24528510</p>
+                        <a href="https://www.facebook.com/betty.0911133750" target="_blank"><button class="button-1"
+                                style="top:40px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="../image/food2.jpg">
+                        <h3 style="left: 480px; top: 250px;">不言 Humble</h3>
+                        <div
+                            style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 140px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; top:320px">407台中市西屯區逢甲路88號</p>
+                        <p style="left: 480px; bottom:60px">Tel:04-24513458</p>
+                        <a href="https://www.facebook.com/humble.pasta/" target="_blank"><button class="button-1"
+                                style="top:250px;right:20px">Website</button></a>
+                    </div>
+                </div>
+                <div id="bar2" class="panel">
+                    <div class="cards">
+                        <img src="../image/food3.jpg">
+                        <h3 style="left: 480px; top: 40px;">御品元冰火湯圓</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; top:110px">407台中市西屯區文華路127巷2號</p>
+                        <p style="left: 480px; top:130px">Tel:0920-955058</p>
+                        <a href="https://www.facebook.com/Ice.Fire.Dumpling.Taichung/" target="_blank"><button
+                                class="button-1" style="top:40px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="../image/food4.jpg">
+                        <h3 style="left: 480px; top: 260px;">紅髮斑斑</h3>
+                        <div
+                            style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 350px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; top:320px">407台中市西屯區文華路9號</p>
+                        <p style="left: 480px; bottom:280px">Tel:04-24519956</p>
+                        <a href="https://www.facebook.com/紅髮斑斑-111760266834127/" target="_blank"><button
+                                class="button-1" style="top:260px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="../image/food6.png">
+                        <h3 style="left: 480px; bottom: 140px;">大甲芋頭城</h3>
+                        <div
+                            style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 130px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; bottom: 75px;">407台中市西屯區福星路461巷2-2號</p>
+                        <p style="left: 480px; bottom: 55px;">Tel:04-24525817</p>
+                        <a href="https://www.google.com/maps/place/大甲芋頭城/@24.1778169,120.6431697,17z/data=!3m1!4b1!4m5!3m4!1s0x34691622496b9e07:0x61cd0ffc326d8cb2!8m2!3d24.1778169!4d120.6453584?hl=zh-TW"
+                            target="_blank">
+                            <button class="button-1" style="bottom:150px;right:20px">Website</button></a>
+                    </div>
+                </div>
+                <div id="bar3" class="panel">
+                    <div class="cards">
+                        <img src="../image/food5.jpg">
+                        <h3 style="left: 480px; top: 40px;">泰奶奶的</h3>
+                        <div style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; top: 90px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; top: 110px;">407台中市西屯區逢甲路20巷43號</p>
+                        <p style="left: 480px; top:130px">Tel:0985-405885</p>
+                        <a href="https://www.google.com/maps/place/泰奶奶的+逢甲店/@24.174631,120.6780782,13z/data=!4m8!1m2!2m1!1z5rOw5aW25aW255qE!3m4!1s0x346917a4c3d7d4b5:0x20992aa6c4aa8ca!8m2!3d24.180117!4d120.64558?hl=zh-TW"
+                            target="_blank">
+                            <button class="button-1" style="top:40px;right:20px">Website</button></a>
+                    </div>
+                    <div class="cards">
+                        <img src="../image/food7.jpg">
+                        <h3 style="left: 480px; top: 250px;">京沺屋抹茶專門</h3>
+                        <div
+                            style="border-bottom:4px rgb(255, 196, 0) solid; width: 150px; bottom: 140px; left: 480px;">
+                        </div>
+                        <p style="left: 480px; top:320px">407台中市西屯區文華路129號</p>
+                        <p style="left: 480px; bottom:60px">Tel:04-24521400</p>
+                        <a href="https://www.facebook.com/京沺屋-抹茶專門-775995739093507/" target="_blank"><button
+                                class="button-1" style="top:250px;right:20px">Website</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main2" style="display: none;">
+        <div class="row ">
+            <div class="col-3">
+                <nav id="navbar-example1" class="navbar-xs navbar-light " style="position: fixed;width: 230px;">
+                    <a class="navbar-brand " href="#">逢甲美食</a>
+                    <nav class="nav nav-pills flex-column ">
+                        <a class="nav-link h5" href="#item-1" style="color: goldenrod;">餐廳</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-1 my-1 " href="#item-1-1">不言Humble</a>
+                            <a class="nav-link ml-1 my-1" href="#item-1-2">南洋廚坊 泰越料理</a>
+                        </nav>
+                        <a class="nav-link h5" href="#item-2" style="color: goldenrod;">甜點</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-1 my-1" href="#item-2-1">大甲芋頭城</a>
+                            <a class="nav-link ml-1 my-1" href="#item-2-2">御品元</br>冰火湯圓</a>
+                            <a class="nav-link ml-1 my-1" href="#item-2-3">紅髮斑斑</a>
+                        </nav>
+                        <a class="nav-link h5" href="#item-3" style="color: goldenrod;">飲料</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-1 my-1" href="#item-3-1">泰奶奶的</a>
+                            <a class="nav-link ml-1 my-1" href="#item-3-2">京沺屋</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+            <div class="col-9">
+                <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+                    <h4 id="item-1">餐廳</h4>
+
+                    <h5 id="item-1-1" style="color: darkorange;">⭐️不言Humble</h5>
+                    <p>
+                    <div><img src="../img/01.jpg" ,alt="不言Humble" width="600"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區逢甲路88號</div>
+                    <div>👍隱藏在台中逢甲的高CP值義式料理!</div>
+                    </p>
+                    <h5 id="item-1-2" style="color: darkorange;">⭐️南洋廚坊 泰越料理</h5>
+                    <p>
+                    <div><img src="../img/02.jpg" ,alt="南洋廚坊 泰越料理" width="600"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區逢甲路88號</div>
+                    <div>👍隱身逢甲巷弄裡，價格平實份量多，價格平實份量多，幾乎天天客滿～</div>
+                    </p>
+                    <h4 id="item-2">甜點</h4>
+                    <h5 id="item-2-1" style="color: darkorange;">⭐️大甲芋頭城</h5>
+                    <p>
+                    <div><img src="../img/03.jpg" alt="大甲芋頭城" width="600"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址:台中市西屯區福上巷278號</div>
+                    <div style="font-size: 1.25rem;">👍選用大甲在地芋頭，平價且大碗，cp值高，推薦芋頭牛奶， 口感綿密超好喝</div>
+                    </p>
+                    <h5 id="item-2-2" style="color: darkorange;">⭐️御品元冰火湯圓</h5>
+                    <p>
+                    <div><img src="../img/04.jpg" alt="御品元冰火湯圓" width="600"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區文華路127巷2號</div>
+                    <div style="font-size: 1.25rem;">👍很特別的冰火湯圓，簡單的口味加上剉冰，冷熱交替的口感，另外還可以自己加桂花蜜與檸檬汁</div>
+                    </p>
+                    <h5 id="item-2-3" style="color: darkorange;">⭐️紅髮斑斑</h5>
+                    <p>
+                    <div><img src="../img\05.jpg" alt="紅髮斑斑" width="600"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區文華路127巷2號</div>
+                    <div style="font-size: 1.25rem;">👍天天都要排隊的短腿阿鹿副品牌，只賣蝴蝶酥，現烤餅乾超好吃</div>
+
+                    </p>
+                    <h4 id="item-3" style="color: darkorange;">飲料</h4>
+
+                    <h5 id="item-3-1" style="color: darkorange;">⭐️泰奶奶的</h5>
+                    <p>
+                    <div><img src="../img/06.jpg" ,alt="泰奶奶的" width="600"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區逢甲路20巷43號</div>
+                    <div style="font-size: 1.25rem;">👍泰奶是現泡的，喝過的都說跟在泰國喝到的一樣，非常道地的滋味，喝過一次之後會上癮啊</div>
+                    </p>
+                    <h5 id="item-3-2" style="color: darkorange;">⭐️京沺屋</h5>
+                    <p>
+                    <div><img src="../img/07.jpg" ,alt="京沺屋" width="600" height="400"></div>
+                    <div style="font-size: 1.25rem;color:navy">🏠地址：台中市西屯區文華路129號</div>
+                    <div style="font-size: 1.25rem;">👍來自台北西門町抹茶專門店，抹茶控們別錯過哦～</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </main>
+
+        {% endblock %}
+
+</body>
+
+</html>
