@@ -21,6 +21,7 @@ app.config['SECRET_KEY'] = os.urandom(24)
 SESSION_PROTECTION = 'strong'
 
 
+
 # 套件參數初始化
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
