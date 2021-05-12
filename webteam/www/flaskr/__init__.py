@@ -7,6 +7,8 @@ from flask_login import LoginManager
 
 
 app = Flask(__name__, template_folder="templates" )
+app = Flask(__name__, static_url_path='/image', static_folder='image')
+app = Flask(__name__, static_url_path='/img', static_folder='img')
 
 
 
@@ -19,7 +21,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
     os.path.join(pjdir, 'data_register.sqlite')
 app.config['SECRET_KEY'] = os.urandom(24)
 SESSION_PROTECTION = 'strong'
-
 
 
 # 套件參數初始化
